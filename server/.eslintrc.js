@@ -18,5 +18,6 @@ module.exports = {
     'vue'
   ],
   rules: {
+    'indent': 'off'
   }
 }

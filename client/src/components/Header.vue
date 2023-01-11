@@ -1,7 +1,6 @@
 <template>
   <v-app-bar elevation="4" class="navbarApp" fixed>
-    <v-icon></v-icon>
-    <v-toolbar-title>LearnChess</v-toolbar-title>
+    <v-toolbar-title><font-awesome-icon icon="fa-solid fa-chess-rook" /> LearnChess <font-awesome-icon icon="fa-solid fa-chess-rook" /> </v-toolbar-title>
   </v-app-bar>
 </template>
 <script>

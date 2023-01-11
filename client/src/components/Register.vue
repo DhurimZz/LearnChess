@@ -1,19 +1,22 @@
 <template>
   <div>
-  <v-img
-    :src="require('../assets/Photos/Chess-Background.jpg')"
-    class="image-Backgraund"
-  >
-  </v-img>
-  <v-container>
-  <div>
-    <input type="email" name="email" v-model="email" placeholder="email" /> <br />
-    <input type="password" name="password" v-model="password" placeholder="password" /> <br />
-    <span class="error" v-html="error"></span>
-    <button @click="register">Register</button>
+    <v-img :src="require('../assets/Photos/Chess-Background.jpg')" class="image-Backgraund" />
+    <v-container class="cont1 d-flex justify-center">
+      <v-flex class="wrapper" xs10 sm8 md6>
+        <form>
+          <v-row class="cont2 d-flex flex-column">
+            <v-toolbar color="transparent"><v-toolbar-title class="custom-color">Register</v-toolbar-title></v-toolbar>
+            <v-col><v-text-field type="email" name="email" v-model="email" label="Email"
+                placeholder="filanfisteku@gmail.com" dark></v-text-field></v-col>
+            <v-col><v-text-field type="password" name="password" v-model="password" label="Password"
+                dark></v-text-field></v-col>
+            <span class="error" v-html="error"></span>
+            <v-col class="d-flex"><v-btn color="primary" @click="register">Register</v-btn></v-col>
+          </v-row>
+        </form>
+      </v-flex>
+    </v-container>
   </div>
-</v-container>
-</div>
 </template>
 <script>
 import AuthenticationService from '@/services/AuthenticationService'
@@ -46,9 +49,26 @@ export default {
 .error {
   color: red;
 }
-.image-Backgraund{
-  min-width:100%;
-  min-height:100%;
+
+.image-Backgraund {
+  min-width: 100%;
+  min-height: 100%;
   position: relative;
+}
+
+.cont1 {
+  position: absolute;
+  top: 25%;
+  right: 0;
+  left: 0;
+}
+
+.cont2 {
+  background-color: rgba(128, 128, 128, 0.5);
+  padding: 2rem;
+  border-radius: 2%;
+}
+.custom-color{
+  color: hsla(0,0%,100%);
 }
 </style>

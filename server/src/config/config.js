@@ -10,5 +10,8 @@ module.exports = {
             storage: './learnches.sqlite'
         }
 
+    },
+    authentication: {
+        jwtSecret: process.env.JWT_SECRET || 'secret'
     }
 }

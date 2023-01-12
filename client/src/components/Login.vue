@@ -5,13 +5,13 @@
       <v-flex class="wrapper" xs10 sm8 md6>
         <form>
           <v-row class="cont2 d-flex flex-column">
-            <v-toolbar color="transparent"><v-toolbar-title class="custom-color">Register</v-toolbar-title></v-toolbar>
+            <v-toolbar color="transparent"><v-toolbar-title class="custom-color">Login</v-toolbar-title></v-toolbar>
             <v-col><v-text-field type="email" name="email" v-model="email" label="Email"
                 placeholder="filanfisteku@gmail.com" dark></v-text-field></v-col>
             <v-col><v-text-field type="password" name="password" v-model="password" label="Password"
                 dark></v-text-field></v-col>
             <span class="error" v-html="error"></span>
-            <v-col class="d-flex"><v-btn color="primary" @click="register" tile>Register</v-btn></v-col>
+            <v-col class="d-flex"><v-btn color="primary" @click="login" tile>login</v-btn></v-col>
           </v-row>
         </form>
       </v-flex>
@@ -29,9 +29,9 @@ export default {
     }
   },
   methods: {
-    async register () {
+    async login () {
       try {
-        await AuthenticationService.register({
+        await AuthenticationService.login({
           email: this.email,
           password: this.password
         })

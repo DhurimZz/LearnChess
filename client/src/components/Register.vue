@@ -2,7 +2,7 @@
   <div>
     <v-img :src="require('../assets/Photos/Chess-Background.jpg')" class="image-Backgraund" />
     <v-container class="cont1 d-flex justify-center">
-      <v-flex class="wrapper" xs10 sm8 md6>
+      <v-flex class="wrapper" xs10 sm8 md6 lg4>
         <form>
           <v-row class="cont2 d-flex flex-column">
             <v-toolbar color="transparent"><v-toolbar-title class="custom-color">Register</v-toolbar-title></v-toolbar>

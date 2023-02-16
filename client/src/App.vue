@@ -3,21 +3,29 @@
     <v-app>
       <Header />
       <v-main>
-          <router-view />
+        <router-view />
       </v-main>
+      <Footer v-if="showFooter" />
     </v-app>
   </div>
 </template>
 
 <script>
 import Header from './components/Header.vue'
+import Footer from './components/Footer.vue'
 
 export default {
   name: 'App',
   components: {
-    Header
+    Header,
+    Footer
+  },
+  computed: {
+    showFooter () {
+      const currentRouteName = this.$route.name
+      return currentRouteName !== 'login' && currentRouteName !== 'register'
+    }
   }
-
 }
 </script>
 

@@ -2,7 +2,7 @@
   <div>
     <v-img :src="require('../assets/Photos/Chess-Background.jpg')" class="image-Backgraund" />
     <v-container class="cont1 d-flex justify-center">
-      <v-flex class="wrapper" xs10 sm8 md6>
+      <v-flex class="wrapper" xs10 sm8 md6 lg5>
         <form>
           <v-row class="cont2 d-flex flex-column">
             <v-toolbar color="transparent"><v-toolbar-title class="custom-color">Register</v-toolbar-title></v-toolbar>
@@ -35,15 +35,14 @@ export default {
           email: this.email,
           password: this.password
         })
-        this.$store.dispatch('setToken', response.token)
-        this.$store.dispatch('setUser', response.user)
+        this.$store.dispatch('setToken', response.data.token)
+        this.$store.dispatch('setUser', response.data.user)
       } catch (error) {
         this.error = error.response.data.error
       }
     }
   }
 }
-
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->

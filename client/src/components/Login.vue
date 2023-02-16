@@ -2,7 +2,7 @@
   <div>
     <v-img :src="require('../assets/Photos/Chess-Background.jpg')" class="image-Backgraund" />
     <v-container class="cont1 d-flex justify-center">
-      <v-flex class="wrapper" xs10 sm8 md6>
+      <v-flex class="wrapper" xs10 sm8 md6 lg5>
         <form>
           <v-row class="cont2 d-flex flex-column">
             <v-toolbar color="transparent"><v-toolbar-title class="custom-color">Login</v-toolbar-title></v-toolbar>
@@ -10,7 +10,7 @@
                 placeholder="filanfisteku@gmail.com" dark></v-text-field></v-col>
             <v-col><v-text-field type="password" name="password" v-model="password" label="Password"
                 dark></v-text-field></v-col>
-            <span class="error" v-html="error"></span>
+            <span class="error" v-html="error" v-if="!$store.state.isUserLoggedIn"></span>
             <v-col class="d-flex"><v-btn color="primary" @click="login" tile>login</v-btn></v-col>
           </v-row>
         </form>
@@ -43,7 +43,6 @@ export default {
     }
   }
 }
-
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->

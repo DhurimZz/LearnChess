@@ -66,7 +66,7 @@ export default {
 }
 
 .cont2 {
-  background-color: rgba(128, 128, 128, 0.5);
+  background-color: rgb(3, 18, 33, 0.5);
   padding: 2rem;
   border-radius: 2%;
 }

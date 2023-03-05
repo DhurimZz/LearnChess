@@ -32,7 +32,7 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 .footerColor {
-  background-image: linear-gradient(to right, #000000, #3d3b3a, #7a7673, #bab8b1, #fcfff6);
+  background-color: rgb(3, 18, 33);
   color:white;
   gap:1.5rem;
 }

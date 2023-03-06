@@ -11,7 +11,7 @@
             <v-col><v-text-field type="password" name="password" v-model="password" label="Password"
                 dark></v-text-field></v-col>
             <span class="error" v-html="error" v-if="!$store.state.isUserLoggedIn"></span>
-            <v-col class="d-flex"><v-btn color="primary" @click="login" tile>login</v-btn></v-col>
+            <v-col class="d-flex"><v-btn style="background-color: #ffcd18;" @click="login" tile>login</v-btn></v-col>
           </v-row>
         </form>
       </v-flex>
@@ -66,7 +66,7 @@ export default {
 }
 
 .cont2 {
-  background-color: rgba(128, 128, 128, 0.5);
+  background-color: rgb(3, 18, 33, 0.5);
   padding: 2rem;
   border-radius: 2%;
 }

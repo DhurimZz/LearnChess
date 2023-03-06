@@ -1,8 +1,8 @@
 <template>
   <v-footer class=" text-center d-flex flex-column footerColor pa-15">
     <div>
-      <v-btn v-for="icon in icons" :key="icon" class="mx-5" icon>
-        <v-icon size="24px">
+      <v-btn v-for="icon in icons" :key="icon" class="mx-5 footer-icon"  icon>
+        <v-icon size="2.5rem">
           {{ icon }}
         </v-icon>
       </v-btn>
@@ -35,5 +35,8 @@ export default {
   background-color: rgb(3, 18, 33);
   color:white;
   gap:1.5rem;
+}
+.footer-icon{
+  color: white !important;
 }
 </style>

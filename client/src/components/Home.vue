@@ -24,14 +24,14 @@
         </v-card>
       </v-container>
     </div>
-    <v-container>
+    <v-container class="banner-wrapper">
       <div>
         <div class="banner-title-wrapper">
           <h1 class="banner-title text-center">OUR SERVICES</h1>
           <p class="banner-description text-center">We make your child happy day after day</p>
         </div>
       </div>
-      <div class="d-flex">
+      <div class="d-flex pt-5">
         <div class="pr-10 banner">
           <div>
             <div>
@@ -82,6 +82,22 @@
         </div>
       </div>
     </v-container>
+    <div class="d-flex flex-column banner1">
+      <div class="d-flex banner1-photo-wrapper">
+        <div class="banner1-photo"><v-img :src="require('../assets/Photos/chess-board.jpg')" class="image-chess-gold" /></div>
+        <div class="banner1-photo"><v-img :src="require('../assets/Photos/boys-playing.jpg')" class="image-chess-gold" /></div>
+        <div class="banner1-photo"><v-img :src="require('../assets/Photos/cat-chess.jpg')" class="image-chess-gold" /></div>
+        <div class="banner1-photo"><v-img :src="require('../assets/Photos/girls-playing.jpg')" class="image-chess-gold" /></div>
+      </div>
+      <div class="banner1-line d-flex justify-center align-center">
+        <div><font-awesome-icon icon="fa-solid fa-chess-knight" class="text-h1"/></div>
+        <div class="d-flex flex-column pr-15 pl-15">
+        <h1 class="text-h3">PLAY & LEARN</h1>
+        <p class="text-h5 ">Take a look into our day to day life here at Chess School </p>
+        </div>
+        <div><v-btn class="banner1-btn"><b>LEARN MORE</b></v-btn></div>
+      </div>
+    </div>
   </div>
 </template>
 
@@ -111,7 +127,7 @@ export default {
 
 .card-text-position {
   position: absolute;
-  top: 40%;
+  top: 50%;
   z-index: 1;
 }
 
@@ -129,13 +145,13 @@ export default {
 .card-item-button {
   height: 3rem !important;
 }
-
+.banner-wrapper {
+  padding: 10rem 0;
+}
 .banner {
   width: 50%;
 }
-.banner-title-wrapper {
-  padding: 5rem 0 1rem;
-}
+
 .banner-icon {
   font-size: 3rem;
 }
@@ -178,5 +194,33 @@ export default {
 
 .banner-subtitle1-text {
   width: 80%;
+}
+
+.banner1 {
+  width: 100%;
+  height: 40rem;
+}
+
+.banner1-photo-wrapper {
+  height: 40%;
+}
+.banner1-photo {
+  width: 25%;
+}
+.banner1-line{
+  height: 27%;
+  background-color:#ffcd18 ;
+}
+
+.banner1-btn {
+  height: 3rem !important;
+  background-color: transparent !important;
+  border: 2px solid black;
+  transition: 0.5s;
+}
+
+.banner1-btn:hover {
+  background-color: #000000 !important;
+  color: white;
 }
 </style>

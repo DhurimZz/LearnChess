@@ -5,7 +5,7 @@
       <v-main>
         <router-view />
       </v-main>
-      <!-- <Footer v-if="showFooter" /> -->
+      <Footer v-if="showFooter" />
     </v-app>
   </div>
 </template>

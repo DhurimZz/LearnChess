@@ -15,7 +15,8 @@
             </div>
             <div>
               <p class="text-left" style="font-size: 1rem;">Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
-                <br>Cum sociis natoque penatibus et magnis dis parturient montes.</p>
+                <br>Cum sociis natoque penatibus et magnis dis parturient montes.
+              </p>
             </div>
             <div class="text-left">
               <v-btn tile class="card-item-button" color="#ffcd18"><b>Join Now</b></v-btn>
@@ -32,7 +33,7 @@
         </div>
       </div>
       <div class="d-flex pt-5">
-        <div class="pr-10 banner">
+        <div class=" banner">
           <div>
             <div>
               <h3 class="banner-subtitle">Chess Education</h3>
@@ -42,11 +43,16 @@
                 great learning tool that will help build
                 your child’s executive function skills.</p>
               <ul type="none" class="banner-text">
-                <li><font-awesome-icon icon="fa-solid fa-chess-pawn" color="#ffcd18" class="pawn-icon"/> Build self-regulation and motivation</li>
-                <li class="pt-2"><font-awesome-icon icon="fa-solid fa-chess-pawn" color="#ffcd18" class="pawn-icon"/> Help with concentration issues</li>
-                <li class="pt-2"><font-awesome-icon icon="fa-solid fa-chess-pawn" color="#ffcd18" class="pawn-icon"/> Learn to plan, organize, and prioritize</li>
-                <li class="pt-2"><font-awesome-icon icon="fa-solid fa-chess-pawn" color="#ffcd18" class="pawn-icon"/> Regulate emotions</li>
-                <li class="pt-2"><font-awesome-icon icon="fa-solid fa-chess-pawn" color="#ffcd18" class="pawn-icon"/> Learn to pay attention to detail</li>
+                <li><font-awesome-icon icon="fa-solid fa-chess-pawn" color="#ffcd18" class="pawn-icon" /> Build
+                  self-regulation and motivation</li>
+                <li class="pt-2"><font-awesome-icon icon="fa-solid fa-chess-pawn" color="#ffcd18" class="pawn-icon" />
+                  Help with concentration issues</li>
+                <li class="pt-2"><font-awesome-icon icon="fa-solid fa-chess-pawn" color="#ffcd18" class="pawn-icon" />
+                  Learn to plan, organize, and prioritize</li>
+                <li class="pt-2"><font-awesome-icon icon="fa-solid fa-chess-pawn" color="#ffcd18" class="pawn-icon" />
+                  Regulate emotions</li>
+                <li class="pt-2"><font-awesome-icon icon="fa-solid fa-chess-pawn" color="#ffcd18" class="pawn-icon" />
+                  Learn to pay attention to detail</li>
               </ul>
               <v-btn variant="flat" class="mt-7 banner-btn" color="#ffcd18"><b>Learn More</b></v-btn>
             </div>
@@ -54,28 +60,32 @@
         </div>
         <div>
           <div>
-            <div class="d-flex">
-              <div>
+            <div class="d-flex justify-space-between">
+              <div style="width: 45%">
                 <font-awesome-icon icon="fa-solid fa-people-group" class="banner-icon" />
                 <h3 class="banner-subtitle1">Various Age Groups</h3>
-                <p class="banner-text banner-subtitle1-text">We provide chess classes to both children from 5 years old and adults.</p>
+                <p class="banner-text">We provide chess classes to both children from 5 years old
+                  and adults.</p>
               </div>
-              <div>
+              <div style="width: 45%">
                 <font-awesome-icon icon="fa-solid fa-chess" class="banner-icon" />
                 <h3 class="banner-subtitle1">Top Chess Variants</h3>
-                <p class="banner-text banner-subtitle1-text">We don’t only teach classical chess but also other top variants of this game.</p>
+                <p class="banner-text">We don’t only teach classical chess but also other top
+                  variants of this game.</p>
               </div>
             </div>
-            <div class="d-flex" style="padding-top: 4rem;">
-              <div>
+            <div class="d-flex justify-space-between" style="padding-top: 4rem;">
+              <div style="width: 45%">
                 <font-awesome-icon icon="fa-solid fa-chess-knight" class="banner-icon" />
                 <h3 class="banner-subtitle1">Best Chess Players</h3>
-                <p class="banner-text banner-subtitle1-text">Our alumni have won many prestigious chess tournaments in the country.</p>
+                <p class="banner-text">Our alumni have won many prestigious chess tournaments in the
+                  country.</p>
               </div>
-              <div>
+              <div style="width: 45%">
                 <font-awesome-icon icon="fa-solid fa-chess-board" class="banner-icon" />
                 <h3 class="banner-subtitle1">Best Chess Openings</h3>
-                <p class="banner-text banner-subtitle1-text">Our students know all the best chess openings and how to use them.</p>
+                <p class="banner-text">Our students know all the best chess openings and how to use
+                  them.</p>
               </div>
             </div>
           </div>
@@ -84,20 +94,67 @@
     </v-container>
     <div class="d-flex flex-column banner1">
       <div class="d-flex banner1-photo-wrapper">
-        <div class="banner1-photo"><v-img :src="require('../assets/Photos/chess-board.jpg')" class="image-chess-gold" /></div>
-        <div class="banner1-photo"><v-img :src="require('../assets/Photos/boys-playing.jpg')" class="image-chess-gold" /></div>
-        <div class="banner1-photo"><v-img :src="require('../assets/Photos/cat-chess.jpg')" class="image-chess-gold" /></div>
-        <div class="banner1-photo"><v-img :src="require('../assets/Photos/girls-playing.jpg')" class="image-chess-gold" /></div>
+        <div class="banner1-photo"><v-img :src="require('../assets/Photos/chess-board.jpg')" class="image-chess-gold" />
+        </div>
+        <div class="banner1-photo"><v-img :src="require('../assets/Photos/boys-playing.jpg')" class="image-chess-gold" />
+        </div>
+        <div class="banner1-photo"><v-img :src="require('../assets/Photos/cat-chess.jpg')" class="image-chess-gold" />
+        </div>
+        <div class="banner1-photo"><v-img :src="require('../assets/Photos/girls-playing.jpg')" class="image-chess-gold" />
+        </div>
       </div>
       <div class="banner1-line d-flex justify-center align-center">
-        <div><font-awesome-icon icon="fa-solid fa-chess-knight" class="text-h1"/></div>
+        <div><font-awesome-icon icon="fa-solid fa-chess-knight" class="text-h1" /></div>
         <div class="d-flex flex-column pr-15 pl-15">
-        <h1 class="text-h3">PLAY & LEARN</h1>
-        <p class="text-h5 ">Take a look into our day to day life here at Chess School </p>
+          <h1 class="text-h3">PLAY & LEARN</h1>
+          <p class="text-h5 ">Take a look into our day to day life here at Chess School </p>
         </div>
         <div><v-btn class="banner1-btn"><b>LEARN MORE</b></v-btn></div>
       </div>
     </div>
+    <v-container class="banner-wrapper">
+      <div class="d-flex flex-column align-center banner2">
+        <div class="banner2-title">
+          <h1 class="banner-title">Articles</h1>
+        </div>
+        <div class="banner2-subtitle">
+          <p class="banner-description" style="margin-bottom: 0;">To keep up with the constantly rising standards of play</p>
+        </div>
+        <div class="d-flex banner2-card-wrapper justify-center">
+          <div>
+            <v-card class="d-flex flex-column" max-width="350" >
+             <div><v-img :src="require('../assets/Photos/chess-board.jpg')" /></div>
+              <div class="d-flex flex-column align-center pt-5 pb-5 pr-10 pl-10 card-text">
+              <h2 class="text-center">Garry Kasparov’s Masterclass</h2>
+              <p class="text-center card-description">Learn the tips, tricks, and strategies from one of the best masters</p>
+              <v-btn variant="flat" class="mt-7 banner-btn btn2" color="#ffcd18"><b>Learn More</b></v-btn>
+            </div>
+            </v-card>
+          </div>
+          <div>
+            <v-card class="d-flex flex-column" max-width="350" >
+             <div><v-img :src="require('../assets/Photos/girls-playing.jpg')" /></div>
+              <div class="d-flex flex-column align-center pt-5 pb-5 pr-10 pl-10 card-text">
+              <h2 class="text-center">Garry Kasparov’s Masterclass</h2>
+              <p class="text-center card-description">Learn the tips, tricks, and strategies from one of the best masters</p>
+              <v-btn variant="flat" class="mt-7 banner-btn btn2" color="#ffcd18"><b>Learn More</b></v-btn>
+            </div>
+            </v-card>
+          </div>
+          <div>
+            <v-card class="d-flex flex-column" max-width="350" >
+             <div><v-img :src="require('../assets/Photos/boys-playing.jpg')" /></div>
+              <div class="d-flex flex-column align-center pt-5 pb-5 pr-10 pl-10 card-text">
+              <h2 class="text-center">Garry Kasparov’s Masterclass</h2>
+              <p class="text-center card-description">Learn the tips, tricks, and strategies from one of the best masters</p>
+              <v-btn variant="flat" class="mt-7 banner-btn btn2" color="#ffcd18"><b>Learn More</b></v-btn>
+            </div>
+            </v-card>
+          </div>
+        </div>
+        <div><v-btn class="banner1-btn"><b>View Other Articles</b></v-btn></div>
+      </div>
+    </v-container>
   </div>
 </template>
 
@@ -145,9 +202,11 @@ export default {
 .card-item-button {
   height: 3rem !important;
 }
+
 .banner-wrapper {
   padding: 10rem 0;
 }
+
 .banner {
   width: 50%;
 }
@@ -155,11 +214,16 @@ export default {
 .banner-icon {
   font-size: 3rem;
 }
+
 .banner-btn {
   height: 3rem !important;
 }
+
+.btn2 {
+  margin-top: 0 !important;
+}
 .banner-title {
-  font-family:sans-serif;
+  font-family: sans-serif;
   color: #000000;
   font-size: 2.5rem;
   line-height: 1.1;
@@ -171,13 +235,13 @@ export default {
 }
 
 .banner-subtitle {
-  font-family:sans-serif;
+  font-family: sans-serif;
   color: #000000;
   font-size: 1.8rem;
 }
 
 .banner-subtitle1 {
-  font-family:sans-serif;
+  font-family: sans-serif;
   color: #000000;
   font-size: 1.2rem;
   padding: 0.5rem 0;
@@ -198,29 +262,44 @@ export default {
 
 .banner1 {
   width: 100%;
-  height: 40rem;
 }
 
 .banner1-photo-wrapper {
-  height: 40%;
+  height: 15rem;
 }
+
 .banner1-photo {
   width: 25%;
 }
-.banner1-line{
-  height: 27%;
-  background-color:#ffcd18 ;
+
+.banner1-line {
+  padding: 2.5rem 0;
+  background-color: #ffcd18;
 }
 
 .banner1-btn {
   height: 3rem !important;
   background-color: transparent !important;
   border: 2px solid black;
-  transition: 0.5s;
+  transition: 0.3s;
 }
 
 .banner1-btn:hover {
   background-color: #000000 !important;
   color: white;
+}
+.banner2-card-wrapper {
+  width: 100%;
+  flex-wrap: wrap;
+  gap: 2rem;
+  padding: 2rem 0;
+}
+
+.card-description {
+ font-size: 0.9rem;
+}
+
+.card-text {
+  gap: 0.5rem;
 }
 </style>

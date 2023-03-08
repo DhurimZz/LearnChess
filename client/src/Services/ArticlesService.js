@@ -1,7 +1,7 @@
 import Api from '@/services/Api'
 
 export default {
-  getAllArticles () {
+  index () {
     return Api().get('articles')
   }
 }

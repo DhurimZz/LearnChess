@@ -16,7 +16,6 @@ module.exports = {
     async post (req, res) {
         try {
             const article = await Article.create(req.body)
-            console.log('article created.')
             res.send(article)
         } catch (err) {
             res.status(500).send({

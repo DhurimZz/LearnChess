@@ -115,44 +115,50 @@
     <v-container class="banner-wrapper">
       <div class="d-flex flex-column align-center banner2">
         <div class="banner2-title">
-          <h1 class="banner-title">Articles</h1>
+          <h1 class="banner-title">New Articles</h1>
         </div>
         <div class="banner2-subtitle">
           <p class="banner-description" style="margin-bottom: 0;">To keep up with the constantly rising standards of play</p>
         </div>
         <div class="d-flex banner2-card-wrapper justify-center">
           <div>
-            <v-card class="d-flex flex-column" max-width="350" >
-             <div><v-img :src="require('../assets/Photos/chess-board.jpg')" /></div>
-              <div class="d-flex flex-column align-center pt-5 pb-5 pr-10 pl-10 card-text">
+            <v-card class="d-flex flex-column justify-space-between card" max-width="350" >
+             <div class="h-half"><v-img :src="require('../assets/Photos/chess-board.jpg')" class="h-full" /></div>
+             <div class="h-half">
+              <div class="d-flex flex-column align-center pt-5 pb-5 pr-10 pl-10 card-text h-full justify-space-around">
               <h2 class="text-center">Garry Kasparov’s Masterclass</h2>
               <p class="text-center card-description">Learn the tips, tricks, and strategies from one of the best masters</p>
               <v-btn variant="flat" class="mt-7 banner-btn btn2" color="#ffcd18"><b>Learn More</b></v-btn>
             </div>
+          </div>
             </v-card>
           </div>
           <div>
-            <v-card class="d-flex flex-column" max-width="350" >
-             <div><v-img :src="require('../assets/Photos/girls-playing.jpg')" /></div>
-              <div class="d-flex flex-column align-center pt-5 pb-5 pr-10 pl-10 card-text">
+            <v-card class="d-flex flex-column justify-space-between card" max-width="350" >
+             <div class="h-half"><v-img :src="require('../assets/Photos/girls-playing.jpg')" class="h-full"/></div>
+             <div class="h-half">
+              <div class="d-flex flex-column align-center pt-5 pb-5 pr-10 pl-10 card-text h-full justify-space-around">
               <h2 class="text-center">Garry Kasparov’s Masterclass</h2>
               <p class="text-center card-description">Learn the tips, tricks, and strategies from one of the best masters</p>
               <v-btn variant="flat" class="mt-7 banner-btn btn2" color="#ffcd18"><b>Learn More</b></v-btn>
             </div>
+          </div>
             </v-card>
           </div>
           <div>
-            <v-card class="d-flex flex-column" max-width="350" >
-             <div><v-img :src="require('../assets/Photos/boys-playing.jpg')" /></div>
-              <div class="d-flex flex-column align-center pt-5 pb-5 pr-10 pl-10 card-text">
+            <v-card class="d-flex flex-column justify-space-between card" max-width="350" >
+             <div class="h-half"><v-img :src="require('../assets/Photos/boys-playing.jpg')" class="h-full"/></div>
+             <div class="h-half">
+              <div class="d-flex flex-column align-center pt-5 pb-5 pr-10 pl-10 card-text h-full justify-space-around">
               <h2 class="text-center">Garry Kasparov’s Masterclass</h2>
               <p class="text-center card-description">Learn the tips, tricks, and strategies from one of the best masters</p>
               <v-btn variant="flat" class="mt-7 banner-btn btn2" color="#ffcd18"><b>Learn More</b></v-btn>
             </div>
+          </div>
             </v-card>
           </div>
         </div>
-        <div><v-btn class="banner1-btn"><b>View Other Articles</b></v-btn></div>
+        <div><v-btn class="banner1-btn" :to="{name: 'articles'}"><b>View Other Articles</b></v-btn></div>
       </div>
     </v-container>
   </div>
@@ -301,5 +307,14 @@ export default {
 
 .card-text {
   gap: 0.5rem;
+}
+.card {
+   font-size: 0.8rem; height: 30rem;
+}
+.h-half {
+  height: 50%;
+}
+.h-full {
+  height: 100%;
 }
 </style>

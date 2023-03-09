@@ -11,13 +11,15 @@
         </div>
         <div class="d-flex banner2-card-wrapper justify-center">
           <div v-for="article in articles" :key="article.id">
-            <v-card class="d-flex flex-column" max-width="350" >
-              <div><v-img :src="article.image" /></div>
-              <div class="d-flex flex-column align-center pt-5 pb-5 pr-10 pl-10 card-text">
+            <v-card class="d-flex flex-column justify-space-between card" max-width="350">
+              <div class="h-half"><v-img :src="article.image" class="h-full" /></div>
+              <div class="h-half">
+              <div class="d-flex flex-column align-center pt-4 pb-4 pr-8 pl-8 card-text h-full justify-space-around" >
                 <h2 class="text-center">{{article.title}}</h2>
                 <p class="text-center card-description">{{article.description}}</p>
                 <v-btn variant="flat" class="mt-7 banner-btn btn2" color="#ffcd18" :href="article.url"><b>Learn More</b></v-btn>
               </div>
+            </div>
             </v-card>
           </div>
         </div>
@@ -82,4 +84,14 @@ export default {
 
 .card-text {
   gap: 0.5rem;
-}</style>
+}
+.card {
+   font-size: 0.8rem; height: 30rem;
+}
+.h-half {
+  height: 50%;
+}
+.h-full {
+  height: 100%;
+}
+</style>

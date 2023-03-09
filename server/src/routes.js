@@ -10,6 +10,8 @@ module.exports = (app) => {
     AuthenticationController.login)
   app.get('/articles',
     ArticlesController.index)
+  app.get('/articles/get-last-articles',
+    ArticlesController.getLastArticles)
   app.post('/articles',
     ArticlesController.post)
 }

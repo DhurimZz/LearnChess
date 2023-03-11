@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <v-app>
-      <Header />
+      <Header v-if="showHeader"/>
       <v-main>
         <router-view />
       </v-main>
@@ -23,7 +23,11 @@ export default {
   computed: {
     showFooter () {
       const currentRouteName = this.$route.name
-      return currentRouteName !== 'login' && currentRouteName !== 'register'
+      return currentRouteName !== 'login' && currentRouteName !== 'register' && currentRouteName !== 'dashboard' && currentRouteName !== 'articles'
+    },
+    showHeader () {
+      const currentRouteName = this.$route.name
+      return currentRouteName !== 'dashboard' && currentRouteName !== 'articles'
     }
   }
 }

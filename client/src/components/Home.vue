@@ -158,7 +158,7 @@
             </v-card>
           </div>
         </div>
-        <div><v-btn class="banner1-btn" :to="{name: 'articles'}"><b>View Other Articles</b></v-btn></div>
+        <div><v-btn class="banner1-btn" :to="{name: 'articlePage'}"><b>View Other Articles</b></v-btn></div>
       </div>
     </v-container>
   </div>

@@ -3,7 +3,8 @@ import Router from 'vue-router'
 import Home from '@/components/Home'
 import Register from '@/components/Register'
 import Login from '@/components/Login'
-import Articles from '@/components/Articles'
+import ArticlePage from '@/components/ArticlePage'
+import Articles from '@/admin/Articles'
 import Dashboard from '@/components/Dashboard'
 
 Vue.use(Router)
@@ -26,14 +27,19 @@ export default new Router({
       component: Login
     },
     {
-      path: '/articles',
-      name: 'articles',
-      component: Articles
+      path: '/articlePage',
+      name: 'articlePage',
+      component: ArticlePage
     },
     {
       path: '/dashboard',
       name: 'dashboard',
       component: Dashboard
+    },
+    {
+      path: '/articles',
+      name: 'articles',
+      component: Articles
     }
   ]
 })

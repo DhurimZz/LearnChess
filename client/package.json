@@ -22,8 +22,9 @@
     "@mdi/font": "^7.1.96",
     "@mdi/js": "^7.1.96",
     "axios": "^1.2.2",
-    "vue": "^2.5.2",
+    "vue": "^2.7.14",
     "vue-router": "^3.0.1",
+    "vue-types": "^5.0.2",
     "vuetify": "^2.6.13",
     "vuex": "^3.5.1",
     "vuex-router-sync": "^2.0.0"

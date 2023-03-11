@@ -5,6 +5,7 @@ import Register from '@/components/Register'
 import Login from '@/components/Login'
 import Articles from '@/components/Articles'
 import Dashboard from '@/components/Dashboard'
+import ContactUs from '@/components/ContactUs'
 
 Vue.use(Router)
 
@@ -34,6 +35,11 @@ export default new Router({
       path: '/dashboard',
       name: 'dashboard',
       component: Dashboard
+    },
+    {
+      path: '/contactus',
+      name: 'contactus',
+      component: ContactUs
     }
   ]
 })

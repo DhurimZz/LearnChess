@@ -19,24 +19,24 @@
         </div>
     </v-navigation-drawer>
 </template>
-  
+
 <script>
 export default {
-    data: () => ({
-        selectedItem: 0,
-        drawer: null,
-        items: [
-            { icon: 'fas fa-home', text: 'Home' },
-            { icon: 'fas fa-hamburger', text: 'Menu' },
-            { icon: 'fas fa-history', text: 'History' },
-            { icon: 'fas fa-wallet', text: 'Wallet' },
-            { icon: 'fas fa-percent', text: 'Promo' },
-            { icon: 'fas fa-cog', text: 'Setting' },
-        ],
-    })
+  data: () => ({
+    selectedItem: 0,
+    drawer: null,
+    items: [
+      { icon: 'fas fa-home', text: 'Home' },
+      { icon: 'fas fa-hamburger', text: 'Menu' },
+      { icon: 'fas fa-history', text: 'History' },
+      { icon: 'fas fa-wallet', text: 'Wallet' },
+      { icon: 'fas fa-percent', text: 'Promo' },
+      { icon: 'fas fa-cog', text: 'Setting' }
+    ]
+  })
 }
+
 </script>
-  
 <style>
 .border {
     margin-left: 8px;

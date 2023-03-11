@@ -184,9 +184,7 @@
                                     $3.95
                                 </strong>
 
-
                             </v-list-item-content>
-
 
                         </v-list-item>
 
@@ -230,8 +228,6 @@
                                             </v-row>
                                         </v-container>
                                     </v-item-group>
-
-
 
                                 </v-col>
                                 <v-col cols="12" sm="6" class="mt-1 ">
@@ -419,9 +415,7 @@
                                     $4.51
                                 </strong>
 
-
                             </v-list-item-content>
-
 
                         </v-list-item>
 
@@ -465,8 +459,6 @@
                                             </v-row>
                                         </v-container>
                                     </v-item-group>
-
-
 
                                 </v-col>
                                 <v-col cols="12" sm="6" class="mt-1 ">
@@ -643,14 +635,13 @@
 
     </v-app>
 </template>
-   
 <script>
 import SideBar from '../components/SideBar'
 export default {
-    name: 'Home',
-    components: {
-        SideBar,
-    },
+  name: 'Home',
+  components: {
+    SideBar
+  }
 }
 </script>
 <style>

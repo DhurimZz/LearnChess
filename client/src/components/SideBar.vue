@@ -8,7 +8,7 @@
                 <v-list-item v-for="(item, i) in items" :key="i" active-class="border" :ripple="false">
                     <v-list-item-content>
                         <v-icon v-text="item.icon" color="white"></v-icon>
-                        <a align="center" v-text="item.text" href="item.route" class="mt-3 caption sidebar-icon-text"></a>
+                        <a align="center" v-text="item.text" :href="item.route" class="mt-3 caption sidebar-icon-text"></a>
                     </v-list-item-content>
                 </v-list-item>
             </v-list-item-group>
@@ -20,7 +20,7 @@
     </v-navigation-drawer>
 </template>
 <script>
-export default {data: () => ({selectedItem: 0, drawer: null, items: [{ icon: 'fas fa-home', text: 'Home', route: 'home' }, { icon: 'fas fa-hamburger', text: 'Article' }]})}
+export default {data: () => ({selectedItem: 0, drawer: null, items: [{ icon: 'fas fa-home', text: 'Home', route: '/' }, { icon: 'fa-solid fa-newspaper', text: 'Article', route: 'articles' }]})}
 </script>
 <style>
 .border {

@@ -6,6 +6,7 @@ import Login from '@/components/Login'
 import ArticlePage from '@/components/ArticlePage'
 import Articles from '@/admin/Articles'
 import Dashboard from '@/components/Dashboard'
+import CreateArticle from '@/admin/CreateArticle'
 
 Vue.use(Router)
 
@@ -37,9 +38,14 @@ export default new Router({
       component: Dashboard
     },
     {
-      path: '/articles',
+      path: '/admin/articles',
       name: 'articles',
       component: Articles
+    },
+    {
+      path: '/article/create',
+      name: 'article-create',
+      component: CreateArticle
     }
   ]
 })

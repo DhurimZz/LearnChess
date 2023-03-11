@@ -1,21 +1,17 @@
 <template>
-    <v-app :style="{ background: $vuetify.theme.themes.dark.background }">
+    <div :style="{ background: $vuetify.theme.themes.dark.background }" class="dashboard h-full">
         <SideBar />
-        <v-container>
+        <v-container class="dashboard-content h-full">
             <slot />
         </v-container>
-    </v-app>
+    </div>
 </template>
 <script>
 import SideBar from '../components/SideBar'
 export default {name: 'Home', components: {SideBar}}
 </script>
 <style>
-.v-card.borderme {
-    border: 2px solid #704232 !important;
-}
-
-.v-card.borderout {
-    border: 1px solid #BCAAA4 !important;
+.h-full {
+    height: 100%;
 }
 </style>

@@ -121,38 +121,14 @@
           <p class="banner-description" style="margin-bottom: 0;">To keep up with the constantly rising standards of play</p>
         </div>
         <div class="d-flex banner2-card-wrapper justify-center">
-          <div>
+          <div v-for="article in articles" :key="article.id">
             <v-card class="d-flex flex-column justify-space-between card" max-width="350" >
-             <div class="h-half"><v-img :src="require('../assets/Photos/chess-board.jpg')" class="h-full" /></div>
+             <div class="h-half"><v-img :src="article.image" class="h-full" /></div>
              <div class="h-half">
               <div class="d-flex flex-column align-center pt-5 pb-5 pr-10 pl-10 card-text h-full justify-space-around">
-              <h2 class="text-center">Garry Kasparov’s Masterclass</h2>
-              <p class="text-center card-description">Learn the tips, tricks, and strategies from one of the best masters</p>
-              <v-btn variant="flat" class="mt-7 banner-btn btn2" color="#ffcd18"><b>Learn More</b></v-btn>
-            </div>
-          </div>
-            </v-card>
-          </div>
-          <div>
-            <v-card class="d-flex flex-column justify-space-between card" max-width="350" >
-             <div class="h-half"><v-img :src="require('../assets/Photos/girls-playing.jpg')" class="h-full"/></div>
-             <div class="h-half">
-              <div class="d-flex flex-column align-center pt-5 pb-5 pr-10 pl-10 card-text h-full justify-space-around">
-              <h2 class="text-center">Garry Kasparov’s Masterclass</h2>
-              <p class="text-center card-description">Learn the tips, tricks, and strategies from one of the best masters</p>
-              <v-btn variant="flat" class="mt-7 banner-btn btn2" color="#ffcd18"><b>Learn More</b></v-btn>
-            </div>
-          </div>
-            </v-card>
-          </div>
-          <div>
-            <v-card class="d-flex flex-column justify-space-between card" max-width="350" >
-             <div class="h-half"><v-img :src="require('../assets/Photos/boys-playing.jpg')" class="h-full"/></div>
-             <div class="h-half">
-              <div class="d-flex flex-column align-center pt-5 pb-5 pr-10 pl-10 card-text h-full justify-space-around">
-              <h2 class="text-center">Garry Kasparov’s Masterclass</h2>
-              <p class="text-center card-description">Learn the tips, tricks, and strategies from one of the best masters</p>
-              <v-btn variant="flat" class="mt-7 banner-btn btn2" color="#ffcd18"><b>Learn More</b></v-btn>
+              <h2 class="text-center">{{article.title}}</h2>
+              <p class="text-center card-description">{{article.description}}</p>
+              <v-btn variant="flat" class="mt-7 banner-btn btn2" color="#ffcd18" :href="article.url"><b>Learn More</b></v-btn>
             </div>
           </div>
             </v-card>
@@ -165,11 +141,15 @@
 </template>
 
 <script>
+import ArticlesService from '@/services/ArticlesService'
 export default {
   data () {
     return {
-
+      articles: null
     }
+  },
+  async mounted () {
+    this.articles = (await ArticlesService.getLastArticles()).data
   }
 }
 </script>

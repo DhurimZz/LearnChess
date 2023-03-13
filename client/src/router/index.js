@@ -3,13 +3,18 @@ import Router from 'vue-router'
 import Home from '@/components/Home'
 import Register from '@/components/Register'
 import Login from '@/components/Login'
-import Articles from '@/components/Articles'
+import ArticlePage from '@/components/ArticlePage'
+import Articles from '@/admin/Articles'
 import Dashboard from '@/components/Dashboard'
+import CreateArticle from '@/admin/CreateArticle'
+import EditArticle from '@/admin/EditArticle'
 import ContactUs from '@/components/ContactUs'
+
 
 Vue.use(Router)
 
 export default new Router({
+  mode: 'history',
   routes: [
     {
       path: '/',
@@ -27,9 +32,9 @@ export default new Router({
       component: Login
     },
     {
-      path: '/articles',
-      name: 'articles',
-      component: Articles
+      path: '/articlePage',
+      name: 'articlePage',
+      component: ArticlePage
     },
     {
       path: '/dashboard',
@@ -37,9 +42,23 @@ export default new Router({
       component: Dashboard
     },
     {
+      path: '/admin/articles',
+      name: 'articles',
+      component: Articles
+    },
+    {
+      path: '/article/create',
+      name: 'article-create',
+      component: CreateArticle
+    },
+    {
+      path: '/articles/:articleId/edit',
+      name: 'article-edit',
+      component: EditArticle
       path: '/contactus',
       name: 'contactus',
       component: ContactUs
+
     }
   ]
 })

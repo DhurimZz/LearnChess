@@ -1,9 +1,9 @@
 <template>
   <div id="app">
     <v-app>
-      <Header />
+      <Header v-if="showHeader"/>
       <v-main>
-        <router-view />
+        <router-view style="height: 100%;"/>
       </v-main>
       <Footer v-if="showFooter" />
     </v-app>
@@ -23,7 +23,11 @@ export default {
   computed: {
     showFooter () {
       const currentRouteName = this.$route.name
-      return currentRouteName !== 'login' && currentRouteName !== 'register'
+      return currentRouteName !== 'login' && currentRouteName !== 'register' && currentRouteName !== 'dashboard' && currentRouteName !== 'articles' && currentRouteName !== 'article-create' && currentRouteName !== 'article-edit'
+    },
+    showHeader () {
+      const currentRouteName = this.$route.name
+      return currentRouteName !== 'dashboard' && currentRouteName !== 'articles' && currentRouteName !== 'article-create' && currentRouteName !== 'article-edit'
     }
   }
 }

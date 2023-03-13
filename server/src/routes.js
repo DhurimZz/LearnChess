@@ -8,10 +8,17 @@ module.exports = (app) => {
   )
   app.post('/login',
     AuthenticationController.login)
+
   app.get('/articles',
     ArticlesController.index)
   app.get('/articles/get-last-articles',
     ArticlesController.getLastArticles)
   app.post('/articles',
     ArticlesController.post)
+  app.get('/articles/:articleId',
+    ArticlesController.show)
+  app.put('/articles/:articleId',
+    ArticlesController.put)
+  app.delete('/articles/:articleId',
+    ArticlesController.delete)
 }

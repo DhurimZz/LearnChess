@@ -11,7 +11,7 @@
         </div>
         <div class="d-flex banner2-card-wrapper justify-center">
           <div v-for="article in articles" :key="article.id">
-            <v-card class="d-flex flex-column justify-space-between card" max-width="350">
+            <v-card class="d-flex flex-column justify-space-between card" max-width="350" min-width="350">
               <div class="h-half"><v-img :src="article.image" class="h-full" /></div>
               <div class="h-half">
               <div class="d-flex flex-column align-center pt-4 pb-4 pr-8 pl-8 card-text h-full justify-space-around" >

@@ -6,6 +6,7 @@ import Login from '@/components/Login'
 import Articles from '@/components/Articles'
 import Dashboard from '@/components/Dashboard'
 import ContactUs from '@/components/ContactUs'
+import AboutUs from '@/components/AboutUs'
 
 Vue.use(Router)
 
@@ -40,6 +41,11 @@ export default new Router({
       path: '/contactus',
       name: 'contactus',
       component: ContactUs
+    },
+    {
+      path: '/aboutus',
+      name: 'aboutus',
+      component: AboutUs
     }
   ]
 })

@@ -19,8 +19,26 @@
         </div>
     </v-navigation-drawer>
 </template>
+
 <script>
 export default {data: () => ({selectedItem: 0, drawer: null, items: [{ icon: 'fas fa-home', text: 'Home', path: '/' }, { icon: 'fa-solid fa-newspaper', text: 'Article', path: '/admin/articles' }]})}
+=======
+
+<script>
+export default {
+  data: () => ({
+    selectedItem: 0,
+    drawer: null,
+    items: [
+      { icon: 'fas fa-home', text: 'Home' },
+      { icon: 'fas fa-hamburger', text: 'Menu' },
+      { icon: 'fas fa-history', text: 'History' },
+      { icon: 'fas fa-wallet', text: 'Wallet' },
+      { icon: 'fas fa-percent', text: 'Promo' },
+      { icon: 'fas fa-cog', text: 'Setting' }
+    ]
+  })
+}
 </script>
 <style>
 .border {
@@ -37,5 +55,4 @@ export default {data: () => ({selectedItem: 0, drawer: null, items: [{ icon: 'fa
     text-decoration: none;
     color: white !important;
 }
-
 </style>

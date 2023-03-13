@@ -23,11 +23,11 @@ export default {
   computed: {
     showFooter () {
       const currentRouteName = this.$route.name
-      return currentRouteName !== 'login' && currentRouteName !== 'register' && currentRouteName !== 'dashboard' && currentRouteName !== 'articles' && currentRouteName !== 'article-create'
+      return currentRouteName !== 'login' && currentRouteName !== 'register' && currentRouteName !== 'dashboard' && currentRouteName !== 'articles' && currentRouteName !== 'article-create' && currentRouteName !== 'article-edit'
     },
     showHeader () {
       const currentRouteName = this.$route.name
-      return currentRouteName !== 'dashboard' && currentRouteName !== 'articles' && currentRouteName !== 'article-create'
+      return currentRouteName !== 'dashboard' && currentRouteName !== 'articles' && currentRouteName !== 'article-create' && currentRouteName !== 'article-edit'
     }
   }
 }

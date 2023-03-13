@@ -11,8 +11,8 @@
             <div class="danger-alert" v-if="error">
               {{error}}
             </div>
-            <v-btn class="me-4" type="submit" color="success" @click.prevent="create">
-              Create
+            <v-btn class="me-4" type="submit" color="info" @click.prevent="update">
+              Update
             </v-btn>
           </form>
         </v-flex>
@@ -40,7 +40,7 @@ export default {
     }
   },
   methods: {
-    async create () {
+    async update () {
       this.error = null
       const areAllFieldsFilledIn = Object
         .keys(this.article)
@@ -49,17 +49,30 @@ export default {
         this.error = 'Please fill in all the required fields.'
         return
       }
+      const articleId = this.$route.params.articleId
       try {
-        await ArticlesService.post(this.article)
+        await ArticlesService.put(this.article)
         this.$router.push({
-          path: '/admin/articles'
+          path: '/admin/articles',
+          params: {
+            articleId: articleId
+          }
         })
       } catch (err) {
         console.log(err)
       }
     }
+  },
+  async mounted () {
+    try {
+      const articleId = this.$route.params.articleId
+      this.article = (await ArticlesService.show(articleId)).data
+    } catch (err) {
+      console.log(err)
+    }
   }
 }
+
 </script>
 
 <style scoped>

@@ -9,5 +9,11 @@ export default {
   },
   post (article) {
     return Api().post('articles', article)
+  },
+  put (article) {
+    return Api().put(`articles/${article.id}`, article)
+  },
+  show (articleId) {
+    return Api().get(`articles/${articleId}`)
   }
 }

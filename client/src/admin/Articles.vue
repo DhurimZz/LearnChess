@@ -1,9 +1,9 @@
 <template>
     <div>
         <Dashboard>
-            <v-btn fab color="primary" :to="{name: 'article-create'}" class="mb-3">
+            <v-btn fab color="primary" :to="{ name: 'article-create' }" class="mb-3">
                 <v-icon>add</v-icon>
-        </v-btn>
+            </v-btn>
             <v-data-table :headers="headers" :items="formattedArticles" :items-per-page="5" item-key="id"
                 class="elevation-1" :footer-props="{
                     showFirstLastPage: true,
@@ -16,7 +16,10 @@
                     <span v-html="item.image"></span>
                 </template>
                 <template v-slot:item.edit="{ item }">
-                    <v-btn color="primary">
+                    <v-btn color="primary" :to="{
+                        name: 'article-edit',
+                        params: { articleId: item.id }
+                    }">
                         Edit
                     </v-btn>
                 </template>

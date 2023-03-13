@@ -7,10 +7,12 @@ import ArticlePage from '@/components/ArticlePage'
 import Articles from '@/admin/Articles'
 import Dashboard from '@/components/Dashboard'
 import CreateArticle from '@/admin/CreateArticle'
+import EditArticle from '@/admin/EditArticle'
 
 Vue.use(Router)
 
 export default new Router({
+  mode: 'history',
   routes: [
     {
       path: '/',
@@ -46,6 +48,11 @@ export default new Router({
       path: '/article/create',
       name: 'article-create',
       component: CreateArticle
+    },
+    {
+      path: '/articles/:articleId/edit',
+      name: 'article-edit',
+      component: EditArticle
     }
   ]
 })

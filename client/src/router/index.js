@@ -10,7 +10,6 @@ import CreateArticle from '@/admin/CreateArticle'
 import EditArticle from '@/admin/EditArticle'
 import ContactUs from '@/components/ContactUs'
 
-
 Vue.use(Router)
 
 export default new Router({
@@ -55,10 +54,11 @@ export default new Router({
       path: '/articles/:articleId/edit',
       name: 'article-edit',
       component: EditArticle
+    },
+    {
       path: '/contactus',
       name: 'contactus',
       component: ContactUs
-
     }
   ]
 })

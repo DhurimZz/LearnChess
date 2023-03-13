@@ -24,7 +24,7 @@
                     </v-btn>
                 </template>
                 <template v-slot:item.delete="{ item }">
-                    <v-btn color="error">
+                    <v-btn color="error" @click="deleteArticle(item.id)">
                         Delete
                     </v-btn>
                 </template>
@@ -78,6 +78,25 @@ export default {
                 url: article.url,
                 image: `<img src="${article.image}" alt="${article.title}" width="150"/>`
             }))
+        }
+    },
+    methods: {
+        async fetchArticles () {
+            try {
+                const response = await ArticlesService.index()
+                this.articles = response.data
+            } catch (error) {
+                console.error(error)
+                // show error message to the user
+            }
+        },
+        async deleteArticle (articleId) {
+            try {
+                await ArticlesService.delete(articleId)
+                await this.fetchArticles()
+            } catch (error) {
+                console.error(error)
+            }
         }
     }
 }

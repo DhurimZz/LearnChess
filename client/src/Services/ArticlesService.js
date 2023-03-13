@@ -15,5 +15,8 @@ export default {
   },
   show (articleId) {
     return Api().get(`articles/${articleId}`)
+  },
+  delete (articleId) {
+    return Api().delete(`articles/${articleId}`)
   }
 }

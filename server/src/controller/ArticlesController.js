@@ -57,5 +57,24 @@ module.exports = {
                 error: 'an error has occured trying to update the article'
             })
         }
-    }
+    },
+    async delete (req, res) {
+        try {
+          const { articleId } = req.params
+          const deletedCount = await Article.destroy({
+            where: { id: articleId }
+          })
+          if (deletedCount === 0) {
+            return res.status(404).send({
+              error: 'Article not found'
+            })
+          }
+          res.send({ message: 'Article deleted successfully' })
+        } catch (err) {
+          console.error(err)
+          res.status(500).send({
+            error: 'An error occurred while deleting the article'
+          })
+        }
+      }
 }

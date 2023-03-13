@@ -17,6 +17,8 @@ module.exports = (app) => {
     ArticlesController.post)
   app.get('/articles/:articleId',
     ArticlesController.show)
-    app.put('/articles/:articleId',
+  app.put('/articles/:articleId',
     ArticlesController.put)
+  app.delete('/articles/:articleId',
+    ArticlesController.delete)
 }

@@ -70,7 +70,39 @@
                 </v-col>
             </v-row>
         </v-container>
-        <SectionsTeam :our-team="ourTeam" />
+
+        <template>
+            <section :class="$vuetify.theme.dark ? 'grey darken-4' : 'grey lighten-4'" class="py-16">
+                <v-container fluid class="text-center">
+                    <v-row>
+                        <v-col>
+                            <h2 class="text-h4 text-sm-h3 text-capitalize font-weight-black mb-4">
+                                Our Core Team
+                            </h2>
+                            <p>
+                                "Behind the Screen: Meet the Masterminds of our Programming Team"
+                            </p>
+                        </v-col>
+                    </v-row>
+                    <v-row>
+                        <v-col v-for="(item, i) in ourTeam" :key="`person-${i}`">
+                            <v-sheet class="py-12 px-6" outlined shaped>
+                                <v-avatar size="240"><v-img :src="require(`../assets/Photos/${item.photo}`)"
+                                        alt="John" /></v-avatar>
+                                <div class="text-h5 text-uppercase font-weight-black mt-6 mb-2">
+                                    {{ item.name }}
+                                </div>
+                                <div class="text--disabled text-uppercase">
+                                    {{ item.position }}
+                                </div>
+                                <div class="text-h6 font-weight-black mt-8">{{ item.phone }}</div>
+                                <div class="subtitle-1 mt-3">{{ item.email }}</div>
+                            </v-sheet>
+                        </v-col>
+                    </v-row>
+                </v-container>
+            </section>
+        </template>
 
         <v-row no-gutters>
             <v-col cols="12" md="6" align-self="center">
@@ -126,7 +158,35 @@
             </v-col>
         </v-row>
 
-        <SectionsTimeline />
+        <template>
+            <section id="timeline" class="py-16">
+                <v-container>
+                    <h2 class="text-h3 text-center font-weight-black mb-8">Our Journey</h2>
+                    <template>
+                        <v-timeline>
+                            <v-timeline-item v-for="(year, i) in years" :key="1" :color="year.color" small>
+                                <template v-slot:opposite>
+                                    <span :class="`headline font-weight-bold ${year.color}--text`"
+                                        v-text="year.year"></span>
+                                </template>
+                                <div class="py-4">
+                                    <h2 :class="`headline font-weight-light mb-4 ${year.color}--text`">
+                                        Start of Computer Science
+                                    </h2>
+                                    <div>
+                                        We first started studying computer science in 2020. We started off with the basics
+                                        of programming, learning how to write simple code and create our first programs. We
+                                        were both excited to learn more about this field and explore the endless
+                                        possibilities of technology.
+                                    </div>
+                                </div>
+                            </v-timeline-item>
+                        </v-timeline>
+                    </template>
+                </v-container>
+            </section>
+        </template>
+
     </div>
 </template>
 
@@ -134,7 +194,41 @@
 export default {
     data() {
         return {
+            ourTeam: [
+                {
+                    name: 'Arbnor Lama',
+                    position: 'Full Stack Developer',
+                    phone: '+383 45 472 620',
+                    email: 'al55544@hotmail.com',
+                    photo: '55544.png'
+                },
+                {
+                    name: 'Dhurim Zenuni',
+                    position: 'Full Stack Developer',
+                    phone: '+383 49 924 052',
+                    email: 'dz52352@ubt-uni.net',
+                    photo: '53252.jpg'
 
+                }
+            ],
+            years: [
+                {
+                    color: 'cyan',
+                    year: '2020',
+                },
+                {
+                    color: 'green',
+                    year: '2021',
+                },
+                {
+                    color: 'pink',
+                    year: '2022',
+                },
+                {
+                    color: 'amber',
+                    year: '2023',
+                }
+            ]
         }
     }
 }
@@ -167,15 +261,16 @@ export default {
     opacity: 0.3;
 }
 
-.PageHead{
+.PageHead {
     background-color: #ffcd18;
     padding-left: 2.5rem;
     padding-right: 2.5rem;
 }
 
-.pagebody1{
+.pagebody1 {
     padding: 5rem;
 }
+
 .card-text-position {
     position: absolute;
     top: 50%;
@@ -194,5 +289,4 @@ export default {
 
 .div-textcolor {
     color: black;
-}
-</style>
+}</style>

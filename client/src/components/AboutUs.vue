@@ -171,13 +171,10 @@
                                 </template>
                                 <div class="py-4">
                                     <h2 :class="`headline font-weight-light mb-4 ${year.color}--text`">
-                                        Start of Computer Science
+                                        {{ year.title }}
                                     </h2>
                                     <div>
-                                        We first started studying computer science in 2020. We started off with the basics
-                                        of programming, learning how to write simple code and create our first programs. We
-                                        were both excited to learn more about this field and explore the endless
-                                        possibilities of technology.
+                                        {{ year.description }}
                                     </div>
                                 </div>
                             </v-timeline-item>
@@ -215,18 +212,26 @@ export default {
                 {
                     color: 'cyan',
                     year: '2020',
+                    title: 'Started Computer Science and Engineering',
+                    description: 'When we first started learning computer science, we were introduced to a whole new world of terms and components. We learned about programming languages, algorithms, data structures, and more. It was overwhelming at first, but we were determined to understand everything and become proficient in the field.'
                 },
                 {
                     color: 'green',
                     year: '2021',
+                    title: 'Introduction to Programming',
+                    description: 'We started with the basics of programming, learning how to write code using a programming language. We learned about variables, data types, loops, and conditional statements. From there, we moved on to more advanced topics, like object-oriented programming, databases, and web development.'
                 },
                 {
                     color: 'pink',
                     year: '2022',
+                    title: 'First Projects',
+                    description: 'As we progressed through our studies, we began to take on more complex projects and challenges. We worked on everything from web development to mobile apps, learning new programming languages and tools along the way. It wasnt always easy, but we persevered through the obstacles and celebrated every success together.'
                 },
                 {
                     color: 'amber',
                     year: '2023',
+                    title: 'And Continuing...',
+                    description: "And now, here we are with over 20 completed projects under our belts! From creating games to building useful tools, we've been able to apply our skills and creativity to make some amazing things. It's been an incredible journey!"
                 }
             ]
         }
@@ -289,4 +294,5 @@ export default {
 
 .div-textcolor {
     color: black;
-}</style>
+}
+</style>

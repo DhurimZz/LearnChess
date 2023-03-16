@@ -164,7 +164,7 @@
                     <h2 class="text-h3 text-center font-weight-black mb-8">Our Journey</h2>
                     <template>
                         <v-timeline>
-                            <v-timeline-item v-for="(year, i) in years" :key="1" :color="year.color" small>
+                            <v-timeline-item v-for="(year) in years" v-bind:key="year" :color="year.color" small>
                                 <template v-slot:opposite>
                                     <span :class="`headline font-weight-bold ${year.color}--text`"
                                         v-text="year.year"></span>
@@ -189,53 +189,53 @@
 
 <script>
 export default {
-    data() {
-        return {
-            ourTeam: [
-                {
-                    name: 'Arbnor Lama',
-                    position: 'Full Stack Developer',
-                    phone: '+383 45 472 620',
-                    email: 'al55544@hotmail.com',
-                    photo: '55544.png'
-                },
-                {
-                    name: 'Dhurim Zenuni',
-                    position: 'Full Stack Developer',
-                    phone: '+383 49 924 052',
-                    email: 'dz52352@ubt-uni.net',
-                    photo: '53252.jpg'
+  data () {
+    return {
+      ourTeam: [
+        {
+          name: 'Arbnor Lama',
+          position: 'Full Stack Developer',
+          phone: '+383 45 472 620',
+          email: 'al55544@hotmail.com',
+          photo: '55544.png'
+        },
+        {
+          name: 'Dhurim Zenuni',
+          position: 'Full Stack Developer',
+          phone: '+383 49 924 052',
+          email: 'dz52352@ubt-uni.net',
+          photo: '53252.jpg'
 
-                }
-            ],
-            years: [
-                {
-                    color: 'cyan',
-                    year: '2020',
-                    title: 'Started Computer Science and Engineering',
-                    description: 'When we first started learning computer science, we were introduced to a whole new world of terms and components. We learned about programming languages, algorithms, data structures, and more. It was overwhelming at first, but we were determined to understand everything and become proficient in the field.'
-                },
-                {
-                    color: 'green',
-                    year: '2021',
-                    title: 'Introduction to Programming',
-                    description: 'We started with the basics of programming, learning how to write code using a programming language. We learned about variables, data types, loops, and conditional statements. From there, we moved on to more advanced topics, like object-oriented programming, databases, and web development.'
-                },
-                {
-                    color: 'pink',
-                    year: '2022',
-                    title: 'First Projects',
-                    description: 'As we progressed through our studies, we began to take on more complex projects and challenges. We worked on everything from web development to mobile apps, learning new programming languages and tools along the way. It wasnt always easy, but we persevered through the obstacles and celebrated every success together.'
-                },
-                {
-                    color: 'amber',
-                    year: '2023',
-                    title: 'And Continuing...',
-                    description: "And now, here we are with over 20 completed projects under our belts! From creating games to building useful tools, we've been able to apply our skills and creativity to make some amazing things. It's been an incredible journey!"
-                }
-            ]
         }
+      ],
+      years: [
+        {
+          color: 'cyan',
+          year: '2020',
+          title: 'Started Computer Science and Engineering',
+          description: 'When we first started learning computer science, we were introduced to a whole new world of terms and components. We learned about programming languages, algorithms, data structures, and more. It was overwhelming at first, but we were determined to understand everything and become proficient in the field.'
+        },
+        {
+          color: 'green',
+          year: '2021',
+          title: 'Introduction to Programming',
+          description: 'We started with the basics of programming, learning how to write code using a programming language. We learned about variables, data types, loops, and conditional statements. From there, we moved on to more advanced topics, like object-oriented programming, databases, and web development.'
+        },
+        {
+          color: 'pink',
+          year: '2022',
+          title: 'First Projects',
+          description: 'As we progressed through our studies, we began to take on more complex projects and challenges. We worked on everything from web development to mobile apps, learning new programming languages and tools along the way. It wasnt always easy, but we persevered through the obstacles and celebrated every success together.'
+        },
+        {
+          color: 'amber',
+          year: '2023',
+          title: 'And Continuing...',
+          description: "And now, here we are with over 20 completed projects under our belts! From creating games to building useful tools, we've been able to apply our skills and creativity to make some amazing things. It's been an incredible journey!"
+        }
+      ]
     }
+  }
 }
 </script>
 <!-- Add "scoped" attribute to limit CSS to this component only -->

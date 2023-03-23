@@ -1,6 +1,7 @@
 const AuthenticationController = require('./controller/AuthenticationController')
 const AuthenticationControllerPolicy = require('./policies/AuthenticationControllerPolicy')
 const ArticlesController = require('./controller/ArticlesController')
+const ContactUsController = require('./controller/ContactUsController')
 module.exports = (app) => {
   app.post('/register',
     AuthenticationControllerPolicy.register,
@@ -21,4 +22,11 @@ module.exports = (app) => {
     ArticlesController.put)
   app.delete('/articles/:articleId',
     ArticlesController.delete)
+
+  app.get('/contactus',
+    ContactUsController.index)
+  app.post('/contactus',
+    ContactUsController.post)
+  app.delete('/contactus/:contactusId',
+    ContactUsController.delete)
 }

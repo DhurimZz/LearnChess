@@ -23,11 +23,11 @@ export default {
   computed: {
     showFooter () {
       const currentRouteName = this.$route.name
-      return currentRouteName !== 'login' && currentRouteName !== 'register' && currentRouteName !== 'dashboard' && currentRouteName !== 'articles' && currentRouteName !== 'article-create' && currentRouteName !== 'article-edit'
+      return currentRouteName !== 'login' && currentRouteName !== 'register' && currentRouteName !== 'dashboard' && currentRouteName !== 'articles' && currentRouteName !== 'article-create' && currentRouteName !== 'article-edit' && currentRouteName !== 'contactus'
     },
     showHeader () {
       const currentRouteName = this.$route.name
-      return currentRouteName !== 'dashboard' && currentRouteName !== 'articles' && currentRouteName !== 'article-create' && currentRouteName !== 'article-edit'
+      return currentRouteName !== 'dashboard' && currentRouteName !== 'articles' && currentRouteName !== 'article-create' && currentRouteName !== 'article-edit' && currentRouteName !== 'contactus'
     }
   }
 }

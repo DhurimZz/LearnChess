@@ -75,15 +75,19 @@
                             </v-col>
                             <v-col cols="12" sm="7">
                                 <v-form ref="form" v-model="valid" :lazy-validation="lazy">
-                                    <v-text-field v-model="name" :rules="nameRules" label="Name" required></v-text-field>
-
-                                    <v-text-field v-model="email" :rules="emailRules" label="E-mail"
+                                    <v-text-field v-model="contactus.name" :rules="nameRules" label="Name"
                                         required></v-text-field>
 
-                                    <v-textarea v-model="textArea" :rules="textAreaRules" label="Message" required />
+                                    <v-text-field v-model="contactus.email" :rules="emailRules" label="E-mail"
+                                        required></v-text-field>
 
-                                    <v-btn :disabled="!valid" color="primary" :dark="valid" rounded block class="mt-3"
-                                        @click="submit">
+                                    <v-textarea v-model="contactus.message" :rules="messageRules" label="Message" />
+
+                                    <div class="danger-alert" v-if="error">
+                                        {{ error }}
+                                    </div>
+
+                                    <v-btn color="primary" :dark="valid" rounded block class="mt-3" @click.prevent="create">
                                         Send Message
                                     </v-btn>
                                 </v-form>
@@ -92,18 +96,6 @@
                     </v-col>
                 </v-row>
             </v-container>
-            <div class="svg-border-waves text-white">
-                <v-img src="~@/assets/img/borderWavesBlue.svg" />
-            </div>
-            <v-snackbar v-model="snackbar.enabled" timeout="3000" right top :color="snackbar.color">
-                {{ snackbar.text }}
-
-                <template v-slot:action="{ attrs }">
-                    <v-btn text v-bind="attrs" @click="snackbar.enabled = false">
-                        Fechar
-                    </v-btn>
-                </template>
-            </v-snackbar>
         </section>
     </div>
 </template>
@@ -118,62 +110,59 @@
     padding-top: 8rem;
     padding-bottom: 4rem;
 }
-#ContactUsSecondaryText{
+
+#ContactUsSecondaryText {
     font-size: small;
-}
-.svg-border-waves .v-image {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    height: 3rem;
-    width: 100%;
-    overflow: hidden;
 }
 </style>
 <script>
 // import {db} from '@/main'
+import ContactUsServices from '@/services/ContactUsServices'
 export default {
-  data: () => ({
-    icons: ['fa-facebook', 'fa-twitter', 'fa-linkedin', 'fa-instagram'],
-    valid: true,
-    name: '',
-    nameRules: [
-      (v) => !!v || 'The text field is required',
-      (v) => (v && v.length >= 6) || 'Name must be more than 6 characters'
-    ],
-    email: '',
-    emailRules: [
-      (v) => !!v || 'The text field is required',
-      (v) => /.+@.+\..+/.test(v) || 'Email must be valid'
-    ],
-    textArea: '',
-    textAreaRules: [
-      (v) => !!v || 'The text field is required',
-      (v) => (v && v.length >= 10) || 'Minimum 10 character'
-    ],
-    lazy: false,
-    snackbar: {
-      enabled: false,
-      text: '',
-      color: ''
+    data () {
+        return {
+            contactus: {
+                name: null,
+                email: null,
+                message: null
+            },
+            error: null,
+            name: '',
+            nameRules: [
+                (v) => !!v || 'The name field is required',
+                (v) => (v && v.length >= 6) || 'Name must be more than 6 characters'
+            ],
+            email: '',
+            emailRules: [
+                (v) => !!v || 'The email field is mandatory',
+                (v) => /.+@.+\..+/.test(v) || 'Email must be valid'
+            ],
+            message: '',
+            messageRules: [
+                (v) => !!v || 'The text field is required',
+                (v) => (v && v.length >= 10) || 'Minimum of 10 characters'
+            ]
+        }
+    },
+    methods: {
+        async create () {
+            this.error = null
+            const areAllFieldsFilledIn = Object
+                .keys(this.contactus)
+                .every(key => !!this.contactus[key])
+            if (!areAllFieldsFilledIn) {
+                this.error = 'Please fill in all the required fields.'
+                return
+            }
+            try {
+                await ContactUsServices.post(this.contactus)
+                this.$router.push({
+                    path: '/admin/contactus'
+                })
+            } catch (err) {
+                console.log(err)
+            }
+        }
     }
-  })
-  /* methods: {
-      submit() {
-        db.collection("contactData").add({
-        name: this.name,
-        email: this.email,
-        message: this.textArea
-      }).then(() => {
-        this.snackbar.text = "Mensagem enviada com sucesso"
-        this.snackbar.color = "success"
-        this.snackbar.enabled = true
-      }).catch(() => {
-        this.snackbar.text = "Erro ao enviar mensagem"
-        this.snackbar.color = "danger"
-        this.snackbar.enabled = true
-      })
-    }
-  } */
 }
 </script>

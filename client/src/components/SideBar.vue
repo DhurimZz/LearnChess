@@ -27,17 +27,17 @@ export default { data: () => ({ selectedItem: 0, drawer: null, items: [{ icon: '
 .border {
     margin-left: 8px;
     margin-right: 8px;
-    background: yellow;
+    background: #ffcd18;
     border-radius: 20px;
     text-decoration: none;
 }
 
 .sidebar-container {
-    background-color: rgb(3, 18, 33, 0.9) !important;
+    background-color: black !important;
 }
 
 .sidebar-icon-text {
     text-decoration: none;
-    color: white !important;
+    color: whitesmoke !important;
 }
 </style>

@@ -1,9 +1,6 @@
 <template>
     <div>
         <Dashboard>
-            <v-btn fab color="primary" :to="{ name: 'contactus-create' }" class="mb-3">
-                <v-icon>add</v-icon>
-            </v-btn>
             <v-data-table :headers="headers" :items="formattedContactUs" :items-per-page="5" item-key="id"
                 class="elevation-1" :footer-props="{
                     showFirstLastPage: true,

@@ -8,16 +8,19 @@
         LearnChess
       </router-link>
       <font-awesome-icon icon="fa-solid fa-chess-rook" class="home-icon" /> </v-toolbar-title>
-    <v-btn class="text-only " variant="text" style="margin-left: 2rem;">
-      Home
+    <v-btn class="text-only " variant="text" :to="{
+        name: 'articlePage'
+      }" >
+      Articles
     </v-btn>
-    <v-btn class="text-only " variant="text">
-      Services
-    </v-btn>
-    <v-btn class="text-only " variant="text">
+    <v-btn class="text-only " variant="text" :to="{
+        name: 'aboutus'
+      }" >
       About Us
     </v-btn>
-    <v-btn class="text-only " variant="text">
+    <v-btn class="text-only " variant="text" :to="{
+        name: 'contactuspage'
+      }" >
       Contact Us
     </v-btn>
     <v-spacer></v-spacer>

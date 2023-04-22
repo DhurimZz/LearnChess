@@ -1,4 +1,4 @@
-const ContactUs = require('../models')
+const ContactUs = require('../models/ContactUs')
 
 module.exports = {
   async index (req, res) {

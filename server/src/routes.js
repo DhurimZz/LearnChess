@@ -2,31 +2,19 @@ const AuthenticationController = require('./controller/AuthenticationController'
 const AuthenticationControllerPolicy = require('./policies/AuthenticationControllerPolicy')
 const ArticlesController = require('./controller/ArticlesController')
 const ContactUsController = require('./controller/ContactUsController')
-module.exports = (app) => {
-  app.post('/register',
-    AuthenticationControllerPolicy.register,
-    AuthenticationController.register
-  )
-  app.post('/login',
-    AuthenticationController.login)
 
-  app.get('/articles',
-    ArticlesController.index)
-  app.get('/articles/get-last-articles',
-    ArticlesController.getLastArticles)
-  app.post('/articles',
-    ArticlesController.post)
-  app.get('/articles/:articleId',
-    ArticlesController.show)
-  app.put('/articles/:articleId',
-    ArticlesController.put)
-  app.delete('/articles/:articleId',
-    ArticlesController.delete)
+module.exports = (router) => {
+  router.post('/register', AuthenticationControllerPolicy.register, AuthenticationController.register)
+  router.post('/login', AuthenticationController.login)
 
-  app.get('/contactus',
-    ContactUsController.index)
-  app.post('/contactus',
-    ContactUsController.post)
-  app.delete('/contactus/:contactusId',
-    ContactUsController.delete)
+  router.get('/articles', ArticlesController.index)
+  router.get('/articles/get-last-articles', ArticlesController.getLastArticles)
+  router.post('/articles', ArticlesController.post)
+  router.get('/articles/:articleId', ArticlesController.show)
+  router.put('/articles/:articleId', ArticlesController.put)
+  router.delete('/articles/:articleId', ArticlesController.delete)
+
+  router.get('/contactus', ContactUsController.index)
+  router.post('/contactus', ContactUsController.post)
+  router.delete('/contactus/:contactusId', ContactUsController.delete)
 }

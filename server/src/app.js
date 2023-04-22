@@ -1,18 +1,33 @@
 const express = require('express')
-const bodyParse = require('body-parser')
-const { sequelize } = require('./models')
+const mongoose = require('mongoose')
+const bodyParser = require('body-parser')
 const cors = require('cors')
 const morgan = require('morgan')
 const config = require('./config/config')
+const routes = require('./routes')
 
 const app = express()
+
+// Middlewares
 app.use(morgan('combined'))
-app.use(bodyParse.json())
+app.use(bodyParser.json())
 app.use(cors())
 
-require('./routes')(app)
+// Routes
+const router = express.Router()
+routes(router)
+app.use('/', router)
 
-sequelize.sync({ force: false }).then(() => {
-  app.listen(config.port)
-  console.log(`Server started on port ${config.port}`)
-})
+// Connect to MongoDB
+mongoose
+  .connect(config.db.url)
+  .then(() => {
+    console.log('Connected to MongoDB')
+    // Start the server
+    app.listen(config.port, () => {
+      console.log(`Server started on port ${config.port}`)
+    })
+  })
+  .catch((error) => {
+    console.log('Error connecting to MongoDB:', error)
+  })

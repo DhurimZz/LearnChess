@@ -1,20 +1,19 @@
 const fs = require('fs')
 const path = require('path')
-const Sequelize = require('sequelize')
+const mongoose = require('mongoose')
 const config = require('../config/config')
 const db = {}
 
-const sequelize = new Sequelize(config.db.database, config.db.user, config.db.password, config.db.options)
+// Connect to MongoDB
+mongoose.connect(config.db.url, { useNewUrlParser: true, useUnifiedTopology: true })
 
-fs
-    .readdirSync(__dirname)
-    .filter((file) => file !== 'index.js')
-    .forEach((file) => {
-        const model = require(path.join(__dirname, file))(sequelize, Sequelize.DataTypes)
-        db[model.name] = model
-    })
+// Load models
+fs.readdirSync(__dirname)
+  .filter((file) => file !== 'index.js')
+  .forEach((file) => {
+    const model = require(path.join(__dirname, file))(mongoose)
+    db[model.modelName] = model
+  })
 
-db.sequelize = sequelize
-db.Sequelize = Sequelize
-
+// Export database object
 module.exports = db

@@ -9,7 +9,8 @@ const UserSchema = new Schema({
     type: String,
     unique: true
   },
-  password: String
+  password: String,
+  role: String
 })
 
 UserSchema.pre('save', function (next) {

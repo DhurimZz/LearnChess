@@ -1,5 +1,5 @@
 <template>
-    <v-navigation-drawer v-model="drawer" app  mini-variant mini-variant-width="90" class="sidebar-container">
+    <v-navigation-drawer v-model="drawer" app mini-variant mini-variant-width="90" class="sidebar-container">
         <v-avatar class="d-block text-center mx-auto mt-4" size="40">
             <v-icon color="white">fas fa-chess-board</v-icon>
         </v-avatar>
@@ -21,21 +21,23 @@
 </template>
 
 <script>
-export default {data: () => ({selectedItem: 0, drawer: null, items: [{ icon: 'fas fa-home', text: 'Home', path: '/' }, { icon: 'fa-solid fa-newspaper', text: 'Article', path: '/admin/articles' }]})}
+export default { data: () => ({ selectedItem: 0, drawer: null, items: [{ icon: 'fas fa-home', text: 'Home', path: '/' }, { icon: 'fa-solid fa-newspaper', text: 'Article', path: '/admin/articles' }, { icon: 'fa-solid fa-inbox', text: 'ContactUs', path: '/admin/ContactUs' }] }) }
 </script>
 <style>
 .border {
     margin-left: 8px;
     margin-right: 8px;
-    background: yellow;
+    background: #ffcd18;
     border-radius: 20px;
     text-decoration: none;
 }
+
 .sidebar-container {
-    background-color: rgb(3, 18, 33, 0.9) !important;
+    background-color: black !important;
 }
+
 .sidebar-icon-text {
     text-decoration: none;
-    color: white !important;
+    color: whitesmoke !important;
 }
 </style>

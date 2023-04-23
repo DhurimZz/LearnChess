@@ -8,7 +8,9 @@ import Articles from '@/admin/Articles'
 import Dashboard from '@/components/Dashboard'
 import CreateArticle from '@/admin/CreateArticle'
 import EditArticle from '@/admin/EditArticle'
-import ContactUs from '@/components/ContactUs'
+import ContactUsPage from '@/components/ContactUsPage'
+import ContactUs from '@/admin/ContactUs'
+import AboutUs from '@/components/AboutUs'
 
 Vue.use(Router)
 
@@ -57,8 +59,18 @@ export default new Router({
     },
     {
       path: '/contactus',
+      name: 'contactuspage',
+      component: ContactUsPage
+    },
+    {
+      path: '/admin/contactus',
       name: 'contactus',
       component: ContactUs
+    },
+    {
+      path: '/aboutus',
+      name: 'aboutus',
+      component: AboutUs
     }
   ]
 })

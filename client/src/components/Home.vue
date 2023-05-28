@@ -92,8 +92,8 @@
         </div>
       </div>
     </v-container>
-    <div class="d-flex flex-column banner1">
-      <div class="d-flex banner1-photo-wrapper">
+    <div  class="d-flex flex-column banner1">
+      <div class="d-md-flex banner1-photo-wrapper">
         <div class="banner1-photo"><v-img :src="require('../assets/Photos/chess-board.jpg')" class="image-chess-gold" />
         </div>
         <div class="banner1-photo"><v-img :src="require('../assets/Photos/boys-playing.jpg')" class="image-chess-gold" />
@@ -103,9 +103,9 @@
         <div class="banner1-photo"><v-img :src="require('../assets/Photos/girls-playing.jpg')" class="image-chess-gold" />
         </div>
       </div>
-      <div class="banner1-line d-flex justify-center align-center">
+      <div class="banner1-line d-flex flex-md-row flex-column align-center justify-md-center">
         <div><font-awesome-icon icon="fa-solid fa-chess-knight" class="text-h1" /></div>
-        <div class="d-flex flex-column pr-15 pl-15">
+        <div class="d-flex flex-column pr-15 pl-15 text-center text-md-start">
           <h1 class="text-h3">PLAY & LEARN</h1>
           <p class="text-h5 ">Take a look into our day to day life here at Chess School </p>
         </div>
@@ -184,9 +184,8 @@ export default {
   /* width: 30rem; */
   font-size: 1.5rem;
 }
-
 .card-item-button {
-  height: 3rem !important;
+  height: 2.8rem !important;
 }
 
 .banner-wrapper {
@@ -250,17 +249,14 @@ export default {
   width: 100%;
 }
 
-.banner1-photo-wrapper {
-  height: 15rem;
-}
-
 .banner1-photo {
-  width: 25%;
+  width: 100%;
 }
 
 .banner1-line {
   padding: 2.5rem 0;
   background-color: #ffcd18;
+  gap: 1.5rem;
 }
 
 .banner1-btn {
@@ -296,5 +292,14 @@ export default {
 }
 .h-full {
   height: 100%;
+}
+@media only screen and (min-width: 960px) {
+.banner1-photo-wrapper {
+  height: 15rem;
+}
+
+.banner1-photo {
+  width: 25%;
+}
 }
 </style>

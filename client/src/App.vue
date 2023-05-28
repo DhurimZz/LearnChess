@@ -42,4 +42,17 @@ html, body {
 #app {
   font-family: 'Montserrat', sans-serif;
 }
+@media only screen and (max-width: 600px) {
+
+  html {
+  font-size: 0.7rem;
+}
+}
+
+@media only screen and (min-width: 600px) and (max-width: 960px) {
+
+html {
+font-size: 1.2rem;
+}
+}
 </style>

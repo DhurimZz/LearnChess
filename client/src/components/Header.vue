@@ -68,7 +68,7 @@ export default {
   data: () => ({
     items: [
     { id: 1, title: 'Articles', path: '/articlePage' },
-    { id: 2, title: 'About Us', path: '' },
+    { id: 2, title: 'About Us', path: '/aboutus' },
     { id: 3, title: 'Contact Us', path: '/contactus' }
     ]
   }),

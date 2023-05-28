@@ -156,9 +156,7 @@ export default {
             }
             try {
                 await ContactUsServices.post(this.contactus)
-                this.$router.push({
-                    path: '/admin/contactus'
-                })
+                window.location.reload()
             } catch (err) {
                 console.log(err)
             }

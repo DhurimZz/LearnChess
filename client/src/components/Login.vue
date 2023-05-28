@@ -37,7 +37,11 @@ export default {
         })
         this.$store.dispatch('setToken', response.data.token)
         this.$store.dispatch('setUser', response.data.user)
-        this.$router.push({ name: 'home' })
+        if (response.data.user.role === 'admin') {
+          this.$router.push({ name: 'dashboard' })
+        } else {
+          this.$router.push({ name: 'home' })
+        }
       } catch (error) {
         this.error = error.response.data.error
       }

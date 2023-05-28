@@ -62,7 +62,6 @@ export default {
             this.articles = response.data
         } catch (error) {
             console.error(error)
-            // show error message to the user
         }
     },
     computed: {
@@ -72,7 +71,7 @@ export default {
             }
 
             return this.articles.map(article => ({
-                id: article.id,
+                id: article._id,
                 title: article.title,
                 description: article.description,
                 url: article.url,
@@ -87,7 +86,6 @@ export default {
                 this.articles = response.data
             } catch (error) {
                 console.error(error)
-                // show error message to the user
             }
         },
         async deleteArticle (articleId) {

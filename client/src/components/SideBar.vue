@@ -21,7 +21,7 @@
 </template>
 
 <script>
-export default { data: () => ({ selectedItem: 0, drawer: null, items: [{ icon: 'fas fa-home', text: 'Home', path: '/' }, { icon: 'fa-solid fa-newspaper', text: 'Article', path: '/admin/articles' }, { icon: 'fa-solid fa-inbox', text: 'ContactUs', path: '/admin/contactus' }] }) }
+export default { data: () => ({ selectedItem: 0, drawer: null, items: [{ icon: 'fas fa-home', text: 'Home', path: '/' }, { icon: 'fa-solid fa-newspaper', text: 'Manage CRUD', path: 'https://localhost:44374/Games' }, { icon: 'fa-solid fa-inbox', text: 'ContactUs', path: '/admin/contactus' }] }) }
 </script>
 <style>
 .border {

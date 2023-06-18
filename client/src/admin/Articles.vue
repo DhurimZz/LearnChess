@@ -12,7 +12,7 @@
                     prevIcon: 'mdi-minus',
                     nextIcon: 'mdi-plus'
                 }">
-                <template v-slot:item.image="{ item }">
+               <template v-slot:item.image="{ item }">
                     <span v-html="item.image"></span>
                 </template>
                 <template v-slot:item.edit="{ item }">
@@ -75,7 +75,7 @@ export default {
                 title: article.title,
                 description: article.description,
                 url: article.url,
-                image: `<img src="${article.image}" alt="${article.title}" width="150"/>`
+                image: `<img src="${article.photo}" alt="..." width="150"/>`
             }))
         }
     },

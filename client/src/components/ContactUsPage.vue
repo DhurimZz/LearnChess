@@ -26,7 +26,8 @@
                                         </p>
                                         <p class="text-justify">
                                             Coordinator <br>
-                                            prof. Betim Gashi | Betim.Gashi@ubt-uni.net
+                                            prof. Arber Kadriu | arber.kadriu@ubt-uni.net <br>
+                                                  Elton Boshnjaku | elton.boshnjaku@ubt-uni.net
                                         </p>
                                     </v-col>
                                     <v-col cols="12" class="d-flex align-center">
@@ -35,7 +36,7 @@
                                         </p>
                                         <p class="text-justify">
                                             MadeBY: <br>
-                                            Arbnor Lama & Dhurim Zenuni
+                                            Arbnor Lama & Dhurim Zenuni & Argjenta Çaka
                                         </p>
                                     </v-col>
                                 </v-row>

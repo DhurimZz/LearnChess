@@ -206,6 +206,14 @@ export default {
           email: 'dz52352@ubt-uni.net',
           photo: '53252.jpg'
 
+        },
+        {
+          name: 'Argjenta Çaka',
+          position: 'Full Stack Developer',
+          phone: '+383 43 833 820',
+          email: 'ac52328@ubt-uni.net',
+          photo: '52328.jpg'
+
         }
       ],
       years: [

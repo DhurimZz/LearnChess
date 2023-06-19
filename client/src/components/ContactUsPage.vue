@@ -59,8 +59,8 @@
                                 <h1 class="font-weight-light display-1">Contact Us</h1>
                                 <h3 id="ContactUsSecondaryText" class="font-weight-light mt-3">
                                     Welcome to our Contact Us page for all things Chess! We're glad you've stopped by and
-                                    we're here to answer any questions or concerns you may have about our services, products
-                                    or anything related to the game of Chess.
+                                    we're here to answer any questions or concerns you may have about our services, 
+                                    products or anything related to the game of Chess.
                                     <br>
                                     If you have any questions about our chess products or services, feel free to reach out
                                     to us using the contact form below. Our dedicated customer service team will respond to

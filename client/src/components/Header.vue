@@ -72,6 +72,7 @@ export default {
     { id: 3, title: 'Contact Us', path: '/contactus' }
     ]
   }),
+  
   methods: {
     logout () {
       this.$store.dispatch('setToken', null)

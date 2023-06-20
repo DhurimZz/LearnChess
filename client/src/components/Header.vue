@@ -15,9 +15,7 @@
       </v-toolbar-items>
       <v-spacer></v-spacer>
       <v-toolbar-items class="hidden-sm-and-down">
-        <v-btn class="text-only " v-if="!$store.state.isUserLoggedIn" :to="{
-          name: 'login'
-        }" variant="text">
+        <v-btn class="text-only " v-if="!$store.state.isUserLoggedIn" @click="redirect" variant="text">
           Login
         </v-btn>
 
@@ -72,10 +70,14 @@ export default {
     { id: 3, title: 'Contact Us', path: '/contactus' }
     ]
   }),
+  
   methods: {
     logout () {
       this.$store.dispatch('setToken', null)
       this.$store.dispatch('setUser', null)
+    },
+    redirect () {
+      window.location.href = 'https://localhost:44374/Identity/Account/Login'
     }
   }
 }

@@ -26,7 +26,8 @@
                                         </p>
                                         <p class="text-justify">
                                             Coordinator <br>
-                                            prof. Betim Gashi | Betim.Gashi@ubt-uni.net
+                                            prof. Arber Kadriu | arber.kadriu@ubt-uni.net <br>
+                                                  Elton Boshnjaku | elton.boshnjaku@ubt-uni.net
                                         </p>
                                     </v-col>
                                     <v-col cols="12" class="d-flex align-center">
@@ -35,7 +36,7 @@
                                         </p>
                                         <p class="text-justify">
                                             MadeBY: <br>
-                                            Arbnor Lama & Dhurim Zenuni
+                                            Arbnor Lama & Dhurim Zenuni & Argjenta Çaka
                                         </p>
                                     </v-col>
                                 </v-row>
@@ -58,8 +59,8 @@
                                 <h1 class="font-weight-light display-1">Contact Us</h1>
                                 <h3 id="ContactUsSecondaryText" class="font-weight-light mt-3">
                                     Welcome to our Contact Us page for all things Chess! We're glad you've stopped by and
-                                    we're here to answer any questions or concerns you may have about our services, products
-                                    or anything related to the game of Chess.
+                                    we're here to answer any questions or concerns you may have about our services, 
+                                    products or anything related to the game of Chess.
                                     <br>
                                     If you have any questions about our chess products or services, feel free to reach out
                                     to us using the contact form below. Our dedicated customer service team will respond to

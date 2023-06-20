@@ -35,8 +35,7 @@
                 <v-col cols="12" md="6">
                     <p>
                         Arbnor and Dhurim, we are two students of computer engineering, sharing a passion for chess and a
-                        desire to
-                        apply our programming skills to create something innovative and exciting. We decided to start
+                        desire to apply our programming skills to create something innovative and exciting. We decided to start
                         working on a web application that would provide a unique chess experience for players of all levels.
                     </p>
                     <blockquote class="text-h4 pa-5 my-4 font-weight-thin">

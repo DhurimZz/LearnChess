@@ -302,4 +302,5 @@ export default {
 .div-textcolor {
     color: black;
 }
+
 </style>

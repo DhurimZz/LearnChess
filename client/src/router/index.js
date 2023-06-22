@@ -11,7 +11,7 @@ import EditArticle from '@/admin/EditArticle'
 import ContactUsPage from '@/components/ContactUsPage'
 import ContactUs from '@/admin/ContactUs'
 import AboutUs from '@/components/AboutUs'
-import ChessPage from '@/components/ChessPage'
+
 Vue.use(Router)
 
 export default new Router({
@@ -71,11 +71,6 @@ export default new Router({
       path: '/aboutus',
       name: 'aboutus',
       component: AboutUs
-    },
-    {
-      path: '/chesspage',
-      name: 'chesspage',
-      component: ChessPage
     }
   ]
 })

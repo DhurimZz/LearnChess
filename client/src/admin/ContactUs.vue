@@ -51,7 +51,7 @@ export default {
             }
 
             return this.contactus.map(contactus => ({
-                id: contactus.id,
+                id: contactus._id,
                 name: contactus.name,
                 email: contactus.email,
                 message: contactus.message

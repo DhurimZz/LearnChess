@@ -12,7 +12,7 @@ import ContactUsPage from '@/components/ContactUsPage'
 import ContactUs from '@/admin/ContactUs'
 import AboutUs from '@/components/AboutUs'
 import Lessons from '@/components/Lessons'
-
+import ChessPage from '@/components/ChessPage'
 Vue.use(Router)
 
 export default new Router({
@@ -77,6 +77,11 @@ export default new Router({
       path: '/lessons',
       name: 'lessons',
       component: Lessons
+    },
+    {
+      path: '/chesspage',
+      name: 'chesspage',
+      component: ChessPage
     }
   ]
 })

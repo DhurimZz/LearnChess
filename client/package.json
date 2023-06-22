@@ -22,7 +22,10 @@
     "@mdi/font": "^7.1.96",
     "@mdi/js": "^7.1.96",
     "axios": "^1.2.2",
+    "chessboardjs": "^0.0.1",
+    "chessboardjs-vue": "^1.0.9",
     "vue": "^2.7.14",
+    "vue-chessboard": "^0.6.7",
     "vue-router": "^3.0.1",
     "vue-types": "^5.0.2",
     "vuetify": "^2.6.13",
@@ -31,6 +34,7 @@
   },
   "devDependencies": {
     "@fortawesome/fontawesome-free": "^6.3.0",
+    "@types/chessboardjs": "^0.3.2",
     "autoprefixer": "^7.1.2",
     "babel-core": "^6.22.1",
     "babel-eslint": "^8.2.1",
